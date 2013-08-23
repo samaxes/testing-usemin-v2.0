@@ -21,7 +21,7 @@ Install NPM and Bower dependencies:
 npm install && bower install --dev
 ```
 
-Create and build the project with grunt-usemin v0.1.12:
+Build the project with grunt-usemin v0.1.12:
 
 ```
 grunt
@@ -40,7 +40,7 @@ Update to grunt-usemin v2.0:
 npm install grunt-usemin-2.0 --save-dev
 ```
 
-Create and build the project with grunt-usemin v2.0:
+Build the project with grunt-usemin v2.0:
 
 ```
 grunt
@@ -51,4 +51,21 @@ Resulting `<img>` tags in the file `dist/views/main.html`:
 ```html
 <img src="/images/logoPhune.png" srcset="/images/logoPhune@2x.png 2x" alt="Phune Gaming" width="71" height="23">
 <img src="images/logoPhune.png" srcset="images/logoPhune@2x.png 2x" alt="Phune Gaming" width="71" height="23">
+```
+
+## Solution
+
+In `Gruntfile.js`, rename usemin option `dirs` to `assetsDirs`.
+
+Build the project with grunt-usemin v2.0 again:
+
+```
+grunt
+```
+
+Resulting `<img>` tags in the file `dist/views/main.html`:
+
+```html
+<img src="/images/0b1f0a13.logoPhune.png" srcset="/images/logoPhune@2x.png 2x" alt="Phune Gaming" width="71" height="23">
+<img src="images/0b1f0a13.logoPhune.png" srcset="images/logoPhune@2x.png 2x" alt="Phune Gaming" width="71" height="23">
 ```
